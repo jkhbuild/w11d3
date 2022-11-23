@@ -10,9 +10,12 @@ export const addProduce = (produceid) => {
 export function cartReducer(state = {}, action) {
   Object.freeze(state);
   const nextState = { ...state };
+  console.log(action)
+
   switch (action.type) {
     case ADD:
-      nextState[action.produce.id] = { id: action.produce.id, count: 1 };
+      nextState[action.produce] = { id: action.produce, count: 1 };
+      return nextState
     default:
       return state;
   }
