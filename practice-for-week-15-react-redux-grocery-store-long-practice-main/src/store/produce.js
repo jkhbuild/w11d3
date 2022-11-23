@@ -6,6 +6,7 @@ export function produceReducer(state = {}, action) {
             const newState = {};
             action.produce.forEach(produce => {
               newState[produce.id] = produce;
+            //   console.log(produce)
             });
             return newState;
       default:
@@ -16,6 +17,7 @@ export function produceReducer(state = {}, action) {
   const POPULATE = "produce/POPULATE"
 
 export const populateProduce = produce => {
+    
     return {
         type:POPULATE,
         produce: produceData
