@@ -6,9 +6,9 @@ import App from "./App";
 import configureStore from "./store/index.js";
 import { Provider } from "react-redux";
 import { populateProduce } from "./store/produce";
+import { addProduce } from "./store/cart.js";
 
 const store = configureStore();
-
 
 function Root() {
   return (
@@ -32,4 +32,5 @@ if (process.env.NODE_ENV !== "production") {
   window.store = store;
   window.store = store;
   window.populateProduce = populateProduce;
+  window.addProduce = addProduce;
 }
